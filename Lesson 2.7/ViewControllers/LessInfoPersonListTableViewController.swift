@@ -1,5 +1,5 @@
 //
-//  littleContactInfoListTableViewController.swift
+//  LessContactInfoListTableViewController.swift
 //  Lesson 2.7
 //
 //  Created by Kostya on 23.03.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LittleInfoPersonListTableViewController: UITableViewController {
+class LessInfoPersonListTableViewController: UITableViewController {
 
     var personList: [Person]!
 
@@ -17,7 +17,7 @@ class LittleInfoPersonListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "littleInfoOfPersonID", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "lessInfoOfPersonID", for: indexPath)
         var cellContent = cell.defaultContentConfiguration()
         let contact = personList[indexPath.row]
         
