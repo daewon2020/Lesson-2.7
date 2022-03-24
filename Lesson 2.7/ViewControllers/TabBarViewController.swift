@@ -13,7 +13,7 @@ class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        personList = Person.getRandomPersonListFrom()
+        personList = Person.getRandomPersonList()
         guard let viewControllers = self.viewControllers else { return }
         for viewController in viewControllers {
             if let navigationController = viewController as? UINavigationController {

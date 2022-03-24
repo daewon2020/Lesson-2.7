@@ -20,7 +20,7 @@ struct Person {
         "Phone: \(phoneNumber)"
     }
     
-    static func getRandomPersonListFrom() -> [Person] {
+    static func getRandomPersonList() -> [Person] {
         
         let personsData = DataManager()
         let shuffledNames = personsData.names.shuffled()
@@ -31,6 +31,7 @@ struct Person {
             let randomEmail = shuffledNames[index].lowercased() +
             (personsData.emailDomains.randomElement() ?? "")
             let randomPhoneNumber = String(Int.random(in: 0...1000000))
+            
             let person = Person(
                 name: shuffledNames[index],
                 surname: shuffledSurnames[index],
